@@ -1,6 +1,14 @@
+import subprocess
+import sys
+
+# Install seaborn if not present
+try:
+    import seaborn as sns
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "seaborn"])
+    import seaborn as sns
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 data= pd.read_csv('/Users/rahulranjan/Downloads/capgemini/Flipkart_mobile_brands_data.csv')
 print(data)
