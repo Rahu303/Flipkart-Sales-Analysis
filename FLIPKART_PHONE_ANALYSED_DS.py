@@ -1,16 +1,8 @@
-import subprocess
-import sys
-
-# Install seaborn if not present
-try:
-    import seaborn as sns
-except ModuleNotFoundError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "seaborn"])
-    import seaborn as sns
 import numpy as np
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
-data= pd.read_csv('/content/Flipkart_mobile_brands_data.csv')
+data= pd.read_csv('Flipkart_mobile_brands_data.csv')
 print(data)
 print(data.head(5))
 data['Model'].fillna('No Model',inplace=True)
