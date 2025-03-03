@@ -10,7 +10,7 @@ except ModuleNotFoundError:
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-data= pd.read_csv('/Users/rahulranjan/Downloads/capgemini/Flipkart_mobile_brands_data.csv')
+data= pd.read_csv('/content/Flipkart_mobile_brands_data.csv')
 print(data)
 print(data.head(5))
 data['Model'].fillna('No Model',inplace=True)
